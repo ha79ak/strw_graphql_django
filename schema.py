@@ -19,6 +19,10 @@ def get_books():
             title="Ince Memed",
             author="Yasar Kemal",
         ),
+        Book(
+            title="Kara Kitap",
+            author="Orhan Pamuk",
+        ),
     ]
 
 @strawberry.type
