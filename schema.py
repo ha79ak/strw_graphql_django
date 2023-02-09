@@ -16,8 +16,8 @@ def get_books():
             author="F. Scott Fitzgerald",
         ),
         Book(
-            title="Grinin 49 Tonu",
-            author="Acaip Birikayip",
+            title="Ince Memed",
+            author="Yasar Kemal",
         ),
     ]
 
