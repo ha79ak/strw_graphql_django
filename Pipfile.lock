@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0f0fe327849bd7b2f940d925890f4bad535b76ee3643fba442778d01d4d0a087"
+            "sha256": "309ab79d86a49791766ea0fdcb37306b5f4096056dcc38d51b3ed8f0936d30d6"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -245,6 +245,14 @@
             ],
             "index": "pypi",
             "version": "==0.156.2"
+        },
+        "strawberry-graphql-django": {
+            "hashes": [
+                "sha256:155a744ce6deb5fd0e6061d24f1786d340af70412c8b356739e39be49c2fafb2",
+                "sha256:dcefad606992194cc8c3e7fbef66dad15d3e4a15b7f5bfb9bcae842fd5d033e2"
+            ],
+            "index": "pypi",
+            "version": "==0.9.2"
         },
         "typing-extensions": {
             "hashes": [

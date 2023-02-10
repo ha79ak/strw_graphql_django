@@ -16,4 +16,4 @@ class Book(models.Model):
          default = uuid.uuid4,
          editable = False)
     title = models.CharField(max_length=200)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.ForeignKey(Author, related_name="books", on_delete=models.CASCADE)
