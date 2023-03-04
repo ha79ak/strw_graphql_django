@@ -49,16 +49,30 @@ class BookOrder:
 class AuthorType:
     id: auto
     name: auto
-    books: 'BookType'
+    books: List['BookType']
 
 
 @strawberry_django.type(
-    models.Book, filters=BookFilter, order=BookOrder, pagination=True
+    models.Book, filters=BookFilter, order=BookOrder, pagination=True, description="Kitap oku.."
 )
 class BookType:
     id: auto
     title: auto
-    author: List[AuthorType]
+    author: AuthorType
+
+    @classmethod
+    def get_queryset(cls, queryset, info):
+        print("//// ", info.context.request.user)
+        return queryset.all()
+        # if not info.context.request.user:
+        #     return queryset.all()
+        # None
+        
+@strawberry_django.input(models.Author)
+class AuthorInput:
+    id: auto
+    name: auto
+    books: auto
 
 
 @strawberry_django.type(get_user_model())
